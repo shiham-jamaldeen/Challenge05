@@ -14,8 +14,12 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <link
+    <!--link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    /-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./cs/style.css" />
@@ -27,27 +31,48 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="currentHH" class="lead"></p>
     </header>
-    <div class="container px-lg-5">
+    <div class="container px-lg-5" id="main">
       <!-- Timeblocks go here -->
-      <div class="row mx-lg-n5" style="border: 2px dotted darkgray" id="0900">
-        <div class="col-2" style="border: 2px dotted darkgray" id="time-9">
-          09:00
+
+      <!--div class="row mx-lg-n5" id="0900">
+        <div class="col-2 time-block hour" id="900">09:00</div>
+        <div class="col-8" id="note-900">
+          <textarea cols="75" rows="2" class="description"></textarea>
         </div>
-        <div class="col-8" id="note-9"></div>
-        <div class="col-2" id="button-9">3 of 3</div>
+        <div class="col-2" id="button-9"><input type="button" /></div>
       </div>
 
-      <div class="row mx-lg-n5" style="border: 2px dotted darkgray">
-        <div class="col-2">10:00</div>
-        <div class="col-8">2 of 3 (wider)</div>
+      <div class="row mx-lg-n5">
+        <div class="col-2 time-block hour" id="1000">10:00</div>
+        <div class="col-8">
+          <textarea cols="75" rows="2" class="description"></textarea>
+        </div>
         <div class="col-2">3 of 3</div>
       </div>
 
-      <div class="row mx-lg-n5" style="border: 2px dotted darkgray">
-        <div class="col-2">11:00</div>
-        <div class="col-8">2 of 3 (wider)</div>
+      <div class="row mx-lg-n5">
+        <div class="col-2 time-block hour" id="1100">11:00</div>
+        <div class="col-8">
+          <textarea cols="75" rows="2" class="description"></textarea>
+        </div>
         <div class="col-2">3 of 3</div>
+      </div-->
+
+      <div class="row" id="900">
+        <div class="col-2 hour time-block" id="900-01">09:00</div>
+        <textarea class="col-8 description" id="900-02">
+Enter an event or a description</textarea
+        >
+        <button class="col-2 saveBtn" id="900-03">Save</button>
+      </div>
+      <div class="row" id="1000">
+        <div class="col-2 hour time-block" id="1000-01">10:00</div>
+        <textarea class="col-8 description" id="1000-02">
+Enter an event or a description</textarea
+        >
+        <button class="col-2 saveBtn" id="1000-03">Save</button>
       </div>
     </div>
 
