@@ -6,8 +6,9 @@ var currentMin = moment().minutes();
 function displayCurrentDateAndTime() {
   //display current date and time
   $("#currentDay").text(today.format("dddd, MMMM, Do YYYY"));
-  $("#currentHH").text(today.format("HH : MM"));
-  console.log(currentHour + " : " + currentMin);
+  $("#currentHH").text(today.format("HH : MM")); //24 Hour clock
+  //$("#currentHH").innerText("Usea 24 Hour clock");
+  //console.log(currentHour + " : " + currentMin);
 }
 
 function displayRowColour() {
@@ -17,12 +18,7 @@ function displayRowColour() {
     let stringInt = parseInt(element.children[0].textContent); //convert from string to integer
     //get the current hour
     let currentHours = parseInt(currentHour); //convert from string to integer
-    // console.log("element coverted: " + stringInt);
-    //console.log("current hour: " + currentHours);
-    // console.log(element);
-    //console.log(element.children[0].textContent);
 
-    //condition to check the current hour and display the colour, in the child "textarea"
     if (stringInt < currentHours) {
       $(element.children[1]).addClass("past");
     } else if (stringInt > currentHours) {
@@ -34,26 +30,32 @@ function displayRowColour() {
 }
 
 function saveContent() {
-  $(".row").click(function (event) {
-    console.log(event.target.id);
-    //get id of button pressed
+  $("i").click(function (event) {
     let buttonPressedID = parseInt(event.target.id);
     //get element id of textarea
-    var textAreaId = "#" + buttonPressedID + "-1";
+    let textAreaId = "#" + buttonPressedID + "-1";
     //get element id of textarea
     let contentsText = $(textAreaId).val();
-    //store value of textarea
+    //console.log("stored items: " + buttonPressedID + " " + contentsText);
+
     localStorage.setItem(buttonPressedID, contentsText);
-    console.log("button pressed: " + buttonPressedID);
-    console.log("context: " + contentsText);
   });
 }
 function getContent() {
-  //select the row
-  //
+  //display items when loading the page by reading traversing local storage
+  //and displaying it in the relevant textarea element
+
+  $(document).ready(function () {
+    //use a loop to count timeblock 09 to 17
+    for (e = 9; e <= 17; e++) {
+      var textareaElementID = "#" + e + "-1";
+      //var count = e;
+      $(textareaElementID).val(localStorage.getItem(e));
+    }
+  });
 }
 //main program
 displayCurrentDateAndTime();
 displayRowColour();
-saveContent();
 getContent();
+saveContent();
