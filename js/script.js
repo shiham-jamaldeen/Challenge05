@@ -54,15 +54,14 @@ function getContent() {
 //main program
 displayCurrentDateAndTime();
 displayRowColour();
-getContent();
 saveContent();
-
-//if the "clear all" button is clicked, then all data stored in local storage deleted.
-$("#clearButton").click(function () {
-  $("textarea").empty();
-  for (e = 9; e <= 17; e++) {
-    var textareaElementID = "#" + e + "-1";
-    //var count = e;
-    $(textareaElementID).val(localStorage.removeItem(e));
-  }
-});
+getContent();
+// //if the "clear all" button is clicked, then all data stored in local storage deleted.
+// $("#clearButton").click(function () {
+//   $("textarea").empty();
+//   for (e = 9; e <= 17; e++) {
+//     var textareaElementID = "#" + e + "-1";
+//     //var count = e;
+//     $(textareaElementID).val(localStorage.removeItem(e));
+//   }
+// });
