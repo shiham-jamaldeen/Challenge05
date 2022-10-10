@@ -13,7 +13,6 @@ Features of the work day scheduler include:
   - present, hot pink
   - future, green
 - appointments saved to your local computer
-- clear all (delete) appoinments from your local computer
 
 ### Technologies used
 
@@ -28,4 +27,6 @@ Features of the work day scheduler include:
 
 ## How to use the calendar
 
-1. Go to
+1. Go to the URL of the application:
+2. To add an event, enter the description in the text area and select the save button.
+Note: When refereshing the page, your previously entered 
