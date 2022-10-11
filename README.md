@@ -28,7 +28,7 @@ Features of the work day scheduler include:
 
 1. Go to the URL of the application: https://shiham-jamaldeen.github.io/Challenge05/
 2. To add an event, enter an event in the text area and select the save button<br/>
-  ** Note**: Any previously entered events will appear in the calendar, even when the page is refreshed or reloaded.
+  **Note**: Any previously entered events will appear in the calendar, even when the page is refreshed or reloaded.
   
 ## Improvements and further work
 * Ability to clear all saved event and appointments
