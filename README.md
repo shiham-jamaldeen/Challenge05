@@ -31,5 +31,5 @@ Features of the work day scheduler include:
   **Note**: Any previously entered events will appear in the calendar, even when the page is refreshed or reloaded.
   
 ## Improvements and further work
-* Ability to clear all saved event and appointments
+* Ability to clear all saved events and appointments
 
