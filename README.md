@@ -21,14 +21,12 @@ Features of the work day scheduler include:
 - Bootstrap 4.3.1
 - jQuery
 
-## Deployed application URL
-
 ## Preview of application
 <img width="1178" alt="Work Day Scheduler" src="https://user-images.githubusercontent.com/112249220/194977472-abec636a-cf2b-40e9-b0f0-c83805db49b2.png">
 
 ## How to use the calendar
 
-1. Go to the URL of the application:
-2. To add an event, enter the description in the text area and select the save button.
-Note: When refereshing the page, your previously entered 
+1. Go to the URL of the application: https://shiham-jamaldeen.github.io/Challenge05/
+2. To add an event, enter a description in the text area and select the save button.
+  ** Note: When refereshing the page, your previously entered 
 
